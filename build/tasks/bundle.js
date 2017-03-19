@@ -1,11 +1,12 @@
 var gulp = require('gulp');
 var bundler = require('aurelia-bundler');
 var bundles = require('../bundles.js');
+const paths_client = require('../paths_client');
 
 var config = {
   force: true,
-  baseURL: 'app/public/',
-  configPath: './app/public/config.js',
+  baseURL: paths_client.cwd,
+  configPath: paths_client.cwd + 'config.js',
   bundles: bundles.bundles
 };
 

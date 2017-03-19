@@ -1,5 +1,6 @@
 var appRoot = 'src/aurelia/';
-var outputRoot = 'app/public/dist/';
+var cwd = 'app/public/';
+var outputRoot = cwd + 'dist/';
 
 
 module.exports = {
@@ -8,13 +9,14 @@ module.exports = {
   html: appRoot + '**/*.html',
   css: appRoot + '**/*.css',
   output: outputRoot,
-  exportCWD: 'app/public/',
+  cwd: cwd,
+  exportCWD: cwd,
   exportOutput: 'export/',
   doc: './doc',
   dtsSrc: [
     './typings/**/*.d.ts',
     './custom_typings/**/*.d.ts'
   ],
-  sourceCopy: 'app/public/src/aurelia/',
-  sourceCopyClean: 'app/public/src/'
+  sourceCopy: cwd + 'src/aurelia/',
+  sourceCopyClean: cwd + 'src/'
 }
