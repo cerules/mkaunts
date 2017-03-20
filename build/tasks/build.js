@@ -10,7 +10,7 @@ var htmlmin = require('gulp-htmlmin');
 // transpiles changed es6 files to SystemJS format
 var typescriptCompiler_client = typescriptCompiler_client || null;
 var typescriptCompiler_server = typescriptCompiler_server || null;
-gulp.task('build-system', ['copy-client-source'], function() {
+gulp.task('build-system', function() {
   if(!typescriptCompiler_client) {
     typescriptCompiler_client = typescript.createProject('tsconfig_client.json', {
       "typescript": require('typescript')
@@ -21,14 +21,8 @@ gulp.task('build-system', ['copy-client-source'], function() {
     .pipe(changed(paths_client.output, {extension: '.ts'}))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(typescriptCompiler_client())
-    .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: ""}))
+    .pipe(sourcemaps.write('.', {includeContent: true}))
     .pipe(gulp.dest(paths_client.output));
-});
-
-//we copy the client source into the public folder so that we can use the sourcemaps to debug with typescript
-gulp.task('copy-client-source', function() {
-  return gulp.src(paths_client.source)
-  .pipe(gulp.dest(paths_client.sourceCopy));
 });
 
 // copies changed html files to the output directory

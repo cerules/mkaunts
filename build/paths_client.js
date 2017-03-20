@@ -16,7 +16,5 @@ module.exports = {
   dtsSrc: [
     './typings/**/*.d.ts',
     './custom_typings/**/*.d.ts'
-  ],
-  sourceCopy: cwd + 'src/aurelia/',
-  sourceCopyClean: cwd + 'src/'
+  ]
 }
