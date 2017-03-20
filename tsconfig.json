@@ -2,12 +2,19 @@
   "compileOnSave": false,
   "compilerOptions": {
     "sourceMap": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
     "target": "es5",
-    "module": "commonjs"
+    "module": "commonjs",
+    "lib": ["es2015", "dom"]
   },
   "include": [
     "typings/index.d.ts",
     "src/**/*.ts",
-    "app/public/jspm_packages/**/*.d.ts"
+    "./custom_typings/**/*.d.ts",
+    "./app/public/jspm_packages/**/*.d.ts"
   ]
 }

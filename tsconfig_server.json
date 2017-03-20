@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": "./src/node",
     "outDir": "./app/node",
+    "rootDir": "./src/node",
     "sourceMap": true,
     "target": "es6",
     "module": "commonjs",
@@ -24,8 +24,5 @@
     "jspm_packages",
     "app",
     "build"
-  ],
-  "atom": {
-    "rewriteTsconfig": false
-  }
+  ]
 }
