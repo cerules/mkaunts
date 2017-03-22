@@ -13,6 +13,7 @@
     "@types/koa-passport": "^2.0.4",
     "@types/koa-router": "^7.0.21",
     "@types/koa-static": "^2.0.22",
+    "@types/mongoose": "^4.7.8",
     "aurelia-bundler": "^0.5.0",
     "aurelia-tools": "^1.0.0",
     "del": "^2.2.2",
@@ -64,10 +65,12 @@
     "jspm": "^0.16.53",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.1.0",
+    "koa-logger": "^2.0.1",
     "koa-mount": "^2.0.0",
     "koa-passport": "^3.0.0",
     "koa-router": "^7.1.0",
     "koa-static": "^3.0.0",
+    "mongoose": "^4.9.1",
     "systemjs": "^0.20.10"
   }
 }
