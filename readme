@@ -1,6 +1,0 @@
-1. Install node
-2. npm install jspm -g
-3. npm install gulp -g
-4. npm install
-5. jspm install
-6. typings install

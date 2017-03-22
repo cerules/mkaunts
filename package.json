@@ -1,9 +1,9 @@
 {
   "name": "mkaunts_template",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/app.js",
-  "author": "",
+  "description": "mkaunts: Mongo Koa Aurelia Node Typescript",
+  "main": "src/node/app.ts",
+  "author": "cerules",
   "license": "ISC",
   "devDependencies": {
     "@types/config": "0.0.32",
