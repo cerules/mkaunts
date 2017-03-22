@@ -5,7 +5,7 @@ var del = require('del');
 var vinylPaths = require('vinyl-paths');
 
 // deletes all files in the output path
-gulp.task('clean', ['unbundle'], function() {
+gulp.task('clean-client', ['unbundle'], function() {
   return gulp.src([paths_client.output])
     .pipe(vinylPaths(del));
 });
@@ -15,6 +15,6 @@ gulp.task('clean-server', ['unbundle'], function() {
     .pipe(vinylPaths(del));
 });
 
-gulp.task('clean-all', ['clean', 'clean-server'], function() {
+gulp.task('clean', ['clean-client', 'clean-server'], function() {
   return;
 });

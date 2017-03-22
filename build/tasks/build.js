@@ -40,13 +40,13 @@ gulp.task('build-css', function() {
     .pipe(gulp.dest(paths_client.output))
 });
 
-// this task calls the clean task (located
+// this task calls the clean-client task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
 // https://www.npmjs.com/package/gulp-run-sequence
 gulp.task('build-client', function(callback) {
   return runSequence(
-    'clean',
+    'clean-client',
     ['build-system', 'build-html', 'build-css'],
     callback
   );
