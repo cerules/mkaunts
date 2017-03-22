@@ -23,7 +23,7 @@ Ensure you are in mkaunts/ i.e. the folder with the package.json
 8. typings install
 
 ## Building
-We use gulp as a taskrunner to handle building the app. <br>
+We use [gulp](http://gulpjs.com/) as a taskrunner to handle building the app. <br>
 All of the gulp taks are located in the build/ folder. <br>
 
 ### Important Gulp Tasks
