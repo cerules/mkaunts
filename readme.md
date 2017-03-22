@@ -8,6 +8,9 @@ This is a template for creating a [Node](https://nodejs.org/en/) application tha
 2. [Download Mongo](https://www.mongodb.com/download-center?jmp=nav#community)
 3. [Install Mongo](https://docs.mongodb.com/manual/administration/install-community/)
 
+Of course you do not need to install Mongo locally. You can connect to any other MongoDB you have. <br>
+Make sure to update the Mongo connection string in config/default.json
+
 ### Install Tools
 
 Run the following commands from the command line
@@ -24,7 +27,7 @@ Ensure you are in mkaunts/ i.e. the folder with the package.json
 
 ## Building
 We use [gulp](http://gulpjs.com/) as a taskrunner to handle building the app. <br>
-All of the gulp taks are located in the build/ folder. <br>
+All of the gulp tasks are located in the build/ folder. <br>
 
 ### Important Gulp Tasks
 #### gulp build
@@ -39,7 +42,7 @@ The build/bundles.js file determines what is bundled and where. This file will n
 
 #### gulp export
 This tasks produces a folder called export/ that contains the bundled client code and any other files that are necessary for the client but cannot be placed in the bundle. <br>
-The idea here is that you to publish the smallest amount of code possible.
+The idea here is that you want to publish the smallest amount of code possible.
 For example 'jspm_packages/system.js' is included in the export since it is necessary to load packages from the bundle so it cannot be a part of the bundle.
 Also it can be important to export some css files that are needed in the index.html.<br>
 The build/export.js file determines what is exported.
