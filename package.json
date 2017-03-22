@@ -6,6 +6,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/config": "0.0.32",
     "@types/koa": "^2.0.38",
     "@types/koa-bodyparser": "^3.0.23",
     "@types/koa-logger": "^2.0.2",
@@ -62,6 +63,7 @@
     }
   },
   "dependencies": {
+    "config": "^1.25.1",
     "jspm": "^0.16.53",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.1.0",
