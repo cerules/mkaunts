@@ -1,5 +1,10 @@
 export interface IUser {
-    email: string;
-    password: string;
-    displayName: string;
+    email : String,
+    hash : String,
+    salt : String,
+    displayName: String,
+
+    setPassword(password: string) : void,
+    validPassword(password: string): boolean,
+    generateJWT() : string
 };

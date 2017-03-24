@@ -3,8 +3,11 @@
  * 
  */
 import * as Router from 'koa-router';
+import * as passport from 'koa-passport';
 
-export = function (router: Router, baseUri: string) {
+export function utility(router: Router, baseUri: string) {
+  router.use(passport.authenticate('jwt', {session: false}));
+
   router.post(baseUri + '/echo', async (ctx, next) => {
     ctx.body = { response: ctx.request.body.text.toUpperCase() };
   });

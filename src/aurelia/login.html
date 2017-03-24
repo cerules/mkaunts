@@ -1,0 +1,20 @@
+<template>
+  <section if.bind="!loggedIn" class="au-animate">
+    <h2>Login</h2>
+    <form role="form" submit.delegate="submit()">
+      <div class="form-group">
+        <label for="fn">Email</label>
+        <input type="text" value.bind="email" class="form-control" id="fn" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="ln">Password</label>
+        <input type="password" value.bind="password" class="form-control" id="ln" placeholder="Password">
+      </div>
+      <button type="submit" click.delegate="login()" class="btn btn-default">Login</button>
+      <button type="submit" click.delegate="register()" class="btn btn-default">Register</button>
+    </form>
+  </section>
+  <section if.bind="loggedIn">
+    Welcome ${userService.email}
+  </section>
+</template>

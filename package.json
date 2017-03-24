@@ -7,6 +7,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/config": "0.0.32",
+    "@types/jsonwebtoken": "^7.2.0",
     "@types/koa": "^2.0.38",
     "@types/koa-bodyparser": "^3.0.23",
     "@types/koa-logger": "^2.0.2",
@@ -15,6 +16,7 @@
     "@types/koa-router": "^7.0.21",
     "@types/koa-static": "^2.0.22",
     "@types/mongoose": "^4.7.8",
+    "@types/passport-jwt": "^2.0.19",
     "aurelia-bundler": "^0.5.0",
     "aurelia-tools": "^1.0.0",
     "del": "^2.2.2",
@@ -64,6 +66,8 @@
   },
   "dependencies": {
     "config": "^1.25.1",
+    "crypto": "0.0.3",
+    "jsonwebtoken": "^7.3.0",
     "jspm": "^0.16.53",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.1.0",
@@ -72,6 +76,7 @@
     "koa-passport": "^3.0.0",
     "koa-router": "^7.1.0",
     "koa-static": "^3.0.0",
-    "mongoose": "^4.9.1"
+    "mongoose": "^4.9.1",
+    "passport-jwt": "^2.2.1"
   }
 }

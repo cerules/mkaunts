@@ -1,5 +1,6 @@
 {
     "host": "localhost",
     "port": 3000,
-    "MongoConnectionString": "mongodb://admin:password@localhost/mkaunts"
+    "MongoConnectionString": "mongodb://admin:password@localhost/mkaunts",
+    "jwtSecret": "secret" //todo: store this in a local config and don't make it 'secret'
 }
