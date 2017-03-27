@@ -13,7 +13,10 @@ export class Welcome {
   }
 
   activate() {
-    
+    if (this.userService.email != null) {
+      this.email = this.userService.email;
+      this.loggedIn = true;
+    }
   }
 
   login() {
