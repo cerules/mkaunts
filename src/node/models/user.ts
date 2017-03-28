@@ -38,13 +38,13 @@ userSchema.methods.validPassword = function (password: string): boolean {
 
 userSchema.methods.generateJWT = function () {
     var today = new Date(), exp = new Date(today);
-    exp.setDate(today.getDate() + 1);
+    exp.setMinutes(exp.getMinutes() + 15);
 
     return jwt.sign({
         _id: this._id,
         sub: this.email,
-        exp: exp.getTime()
-    }, <string>config.get('jwtSecret')); //TODO: use an environment variable for the secret (ie something not in codebase)
+        exp: exp.getTime() / 1000 // exp is in milliseconds and we want seconds
+    }, <string>config.get('jwtSecret'));
 };
 
 export var User = mongoose.model<IUserModel>("User", userSchema);
