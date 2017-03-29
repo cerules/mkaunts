@@ -5,3 +5,4 @@ app/public/src/
 app/public/jspm_packages/
 app/node/
 export/
+startMongo.bat
