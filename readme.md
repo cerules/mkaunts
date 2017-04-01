@@ -105,3 +105,12 @@ We can also install type definition files with npm.
 will install a type definition file into the node_modules/@types/ folder.
 
 It seems like [@types](https://www.npmjs.com/~types) is the main way that type definition files will be acquired in the future.
+
+# References
+
+* [MAKOAUN-Skeleton (typescript)](https://github.com/vogelrh/makoaun-skeleton)
+* [Node TLS Docs](https://nodejs.org/api/tls.html)
+* [Typescript Compiler Options Docs](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+* [Creating Mongoose models with TypeScript](https://github.com/Appsilon/styleguide/wiki/mongoose-typescript-models)
+* [JWT](https://jwt.io/introduction/)
+* [Aurelia Typescript Skeleton](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-typescript)
