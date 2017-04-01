@@ -1,6 +1,9 @@
 {
     "host": "localhost",
     "port": 3000,
+    //todo: store all values below this comment in a local config and don't use any of these values because they are insecure
     "MongoConnectionString": "mongodb://admin:password@localhost/mkaunts",
-    "jwtSecret": "secret" //todo: store this in a local config and don't make it 'secret'
+    "jwtSecret": "secret", 
+    "sslKeyPath": "sslKeys/mkaunts-key.pem",
+    "sslCertPath": "sslKeys/mkaunts-cert.pem"
 }

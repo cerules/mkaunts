@@ -1,6 +1,6 @@
 # MKAUNTS: [Mongo](https://www.mongodb.com/) [Koa](http://koajs.com/) [Aurelia](http://aurelia.io/) [Node](https://nodejs.org/en/) [Typescript](https://www.typescriptlang.org/)
 
-This is a template for creating a [Node](https://nodejs.org/en/) application that hosts an [Aurelia](http://aurelia.io/) [SPA](https://en.wikipedia.org/wiki/Single-page_application) using [Koa](http://koajs.com/) as a router and [Mongo](https://www.mongodb.com/) as a database written in [Typescript](https://www.typescriptlang.org/).
+This is a template for creating a [Node](https://nodejs.org/en/) https application that hosts an [Aurelia](http://aurelia.io/) [SPA](https://en.wikipedia.org/wiki/Single-page_application) using [Koa](http://koajs.com/) as a router and [Mongo](https://www.mongodb.com/) as a database written in [Typescript](https://www.typescriptlang.org/).
 
 ## Prerequisites
 

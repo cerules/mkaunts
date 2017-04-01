@@ -1,3 +1,5 @@
+import * as https from 'https';
+import * as fs from 'fs';
 import * as koa from 'koa';
 import * as koaStatic from 'koa-static';
 import * as mount from 'koa-mount';
@@ -14,4 +16,11 @@ app.use(logger());
 app.use(mount('/api/', api));
 app.use(koaStatic('./app/public/'));
 
-app.listen(config.get('port'));
+
+const httpsOptions = {
+    key  : fs.readFileSync(<string>config.get('sslKeyPath')),
+   cert : fs.readFileSync(<string>config.get('sslCertPath'))
+}
+
+https.createServer(httpsOptions, app.callback())
+    .listen(config.get('port'));
