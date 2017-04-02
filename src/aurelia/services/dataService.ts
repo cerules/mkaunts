@@ -1,6 +1,7 @@
 import { autoinject } from 'aurelia-framework';
 import { HttpClient, json } from 'aurelia-fetch-client';
 import { IUser } from './../../shared/models/IUser';
+import { IRecipe } from './../../shared/models/IRecipe';
 import { Router } from 'aurelia-router';
 import 'fetch';
 
@@ -48,24 +49,24 @@ export class DataService {
         return this.getRequest('api/user/whoami');
     }
 
-    getRecipes(): Promise<any> {
+    getRecipes(): Promise<IRecipe[]> {
         return this.getRequest('api/recipe');
     }
 
-    getRecipe(id: string): Promise<any> {
+    getRecipe(id: string): Promise<IRecipe> {
         return this.getRequest('api/recipe/recipe/' + id);
     }
 
-    createRecipe(recipe: any): Promise<any> {
+    createRecipe(recipe: any): Promise<IRecipe> {
         return this.postRequest('api/recipe', recipe);
     }
 
-    updateRecipe(recipe: any): Promise<any> {
-        return this.putRequest('api/recipe/' + recipe.id, recipe);
+    updateRecipe(recipe: any): Promise<IRecipe> {
+        return this.putRequest('api/recipe/' + recipe._id, recipe);
     }
 
-    deleteRecipe(id: string): Promise<any> {
-        return this.deleteRecipe('api/recipe/' + id);
+    deleteRecipe(id: string): Promise<IRecipe> {
+        return this.deleteRequest('api/recipe/' + id);
     }
 
     private getRequest(url: string, headers?: any): Promise<any> {
@@ -119,8 +120,9 @@ export class DataService {
         options.headers = this.addAuthToHeaders(options.headers);
         return this.http.fetch(url, options)
             .then(response => {
-                console.log(response.body);
-                return response.json();
+                let json = response.json();
+                console.log(json);
+                return json;
             })
             .catch(error => this.handleRequestError(error));
     }

@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": "./src/aurelia",
+    "rootDir": "./src",
     "outDir": "./app/public/dist",
     "sourceMap": true,
     "target": "es5",
@@ -16,6 +16,7 @@
   },
   "filesGlob": [
     "./src/aurelia/**/*.ts",
+    "./src/shared/**/*.ts",
     "./typings/index.d.ts",
     "./custom_typings/**/*.d.ts",
     "./app/public/jspm_packages/**/*.d.ts"

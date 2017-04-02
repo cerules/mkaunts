@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var paths_client = require('../paths_client');
 var paths_server = require('../paths_server');
+var paths_shared = require('../paths_shared');
 
 // outputs changes to files to the console
 function reportChange(event) {
@@ -17,4 +18,5 @@ gulp.task('watch', ['build-client', 'build-server'], function() {
   gulp.watch(paths_client.css, ['build-css']).on('change', reportChange);
   gulp.watch(paths_client.style).on('change', reportChange);
   gulp.watch(paths_server.source, ['build-server']).on('change', reportChange);
+  gulp.watch(paths_shared.source, ['build-server', 'build-system']).on('change', reportChange);
 });

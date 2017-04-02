@@ -1,8 +1,35 @@
 <template>
     <h1> Recipes </h1>
-    <ul>
-        <li repeat.for="recipe of recipes">
-            ${recipe.name}
-        </li>
-    </ul>
+    <div class="col-md-12">
+        <div class="col-md-6 col-sm-12">
+            <ul>
+                <li repeat.for="recipe of recipes">
+                    <h1>${recipe.name}
+                        <span class="fa fa-pencil" style="cursor:pointer;" if.bind="hasRecipePermission(recipe)" click.delegate="selectRecipe(recipe)"></span>
+                        <span class="fa fa-trash" style="cursor:pointer;" if.bind="hasRecipePermission(recipe)" click.delegate="deleteRecipe(recipe._id)"></span>
+                    </h1>
+                    <p>${recipe.uploader.displayName}</p>
+                    <p>${recipe.uploader.email}</p>
+                    <p>${recipe.uploadDate}</p>
+                    <p> <pre>${recipe.instructions}</pre> </p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                <label>
+                    Recipe Name:
+                </label>
+                <input class="form-control" type="text" value.bind="selectedRecipe.name">
+                <label>
+                    Recipe Instructions:
+                </label>
+                <textarea class="form-control" rows="4" value.bind="selectedRecipe.instructions"></textarea>
+                <div class="form-inline">
+                    <button class="form-control" click.delegate="createRecipe()">Create</button>
+                    <button class="form-control" if.bind="selectedRecipe._id != null" click.delegate="updateRecipe()">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

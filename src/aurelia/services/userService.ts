@@ -23,6 +23,9 @@ export class UserService {
 
     whoami() {
         return this.dataService.whoami()
-            .then(user => this.user = user);
+            .then(user => {
+                console.log(user);
+                this.user = user;
+            });
     }
 }

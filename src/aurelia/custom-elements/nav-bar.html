@@ -11,12 +11,11 @@
         <i class="fa fa-home"></i>
         <span>${router.title}</span>
       </a>
-        
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+        <li repeat.for="row of router.navigation" if.bind="!row.settings.auth || userService.user != null" class="${row.isActive ? 'active' : ''}">
           <a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.in" href.bind="row.href">${row.title}</a>
         </li>
       </ul>
@@ -28,7 +27,5 @@
           <i class="fa fa-spinner fa-spin fa-2x"></i>
         </li>
       </ul>
-      
-    
   </nav>
 </template>

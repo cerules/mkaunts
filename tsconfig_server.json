@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./app/node",
-    "rootDir": "./src/node",
+    "outDir": "./app",
+    "rootDir": "./src",
     "sourceMap": true,
     "target": "es6",
     "module": "commonjs",
@@ -16,6 +16,7 @@
   },
   "filesGlob": [
     "./src/node/**/*.ts",
+    "./src/shared/**/*.ts",
     "./typings/index.d.ts",
     "./custom_typings/**/*.d.ts"
   ],
