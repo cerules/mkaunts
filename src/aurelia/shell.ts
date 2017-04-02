@@ -7,7 +7,7 @@ export class App {
     config.title = 'Aurelia';
     config.map([
       { route: ['', 'login'], name: 'login',      moduleId: 'login',      nav: true, title: 'Login' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' }
+      { route: ['recipes'], name: 'recipes',      moduleId: 'recipes',      nav: true, title: 'Recipes' }
     ]);
 
     this.router = router;

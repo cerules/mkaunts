@@ -8,7 +8,11 @@ import * as config from 'config';
 import * as mongoose from 'mongoose';
 import * as api from './api/router';
 
-mongoose.connect(<string>config.get('MongoConnectionString'));
+//set mongoose/mongo driver promise libraries to native promises
+(<any>mongoose).Promise = global.Promise;
+mongoose.connect(<string>config.get('MongoConnectionString'), {
+    promiseLibrary: global.Promise
+});
 
 const app = new koa();
 
@@ -16,10 +20,9 @@ app.use(logger());
 app.use(mount('/api/', api));
 app.use(koaStatic('./app/public/'));
 
-
 const httpsOptions = {
-    key  : fs.readFileSync(<string>config.get('sslKeyPath')),
-   cert : fs.readFileSync(<string>config.get('sslCertPath'))
+    key: fs.readFileSync(<string>config.get('sslKeyPath')),
+    cert: fs.readFileSync(<string>config.get('sslCertPath'))
 }
 
 https.createServer(httpsOptions, app.callback())

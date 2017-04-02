@@ -9,6 +9,7 @@ import * as parser from 'koa-bodyparser';
 import {intializePassport} from './auth';
 import {utility} from './controllers/utility';
 import {userController} from './controllers/userController';
+import {recipeController} from './controllers/recipeController';
 
 const api = new Koa();
 const router = new Router();
@@ -20,6 +21,7 @@ intializePassport(api);
 // that takes a router and a url component.
 userController(router, 'user');
 utility(router, 'utility');
+recipeController(router, 'recipe');
 
 api.use(router.routes());
 

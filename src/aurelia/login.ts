@@ -13,8 +13,8 @@ export class Welcome {
   }
 
   activate() {
-    if (this.userService.email != null) {
-      this.email = this.userService.email;
+    if (this.userService.user != null) {
+      this.email = this.userService.user.email;
       this.loggedIn = true;
     }
   }
