@@ -17,8 +17,8 @@ export class Recipes {
         return this.getAllRecipes();
     }
 
-    hasRecipePermission(recipe) {
-        return recipe.uploaderId == this.userService.user._id;
+    hasRecipePermission(recipe: IRecipe) {
+        return recipe.uploader._id == this.userService.user._id;
     }
 
     getAllRecipes() {
