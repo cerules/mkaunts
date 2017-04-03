@@ -24,31 +24,29 @@ export function recipeController(router: Router, baseUri: string) {
   });
 
   router.put(baseUri + '/:id', async (ctx, next) => {
-    await Recipe.findByIdAndUpdate(ctx.params.id, {
-      name: ctx.request.body.name,
-      instructions: ctx.request.body.instructions
-    }).exec(function (err, recipe) {
-      if (err) {
-        ctx.onerror(err);
-      }
-      else {
-        if (recipe) {
+    await Recipe.findOneAndUpdate({
+      _id: ctx.params.id,
+      uploader: ctx.state.user._id
+    }, {
+        name: ctx.request.body.name,
+        instructions: ctx.request.body.instructions
+      }).exec(function (err, recipe) {
+        if (err) {
+          ctx.onerror(err);
+        }
+        else if (recipe) {
           ctx.body = recipe;
           ctx.status = 200;
         }
-        else {
-          ctx.status = 404;
-        }
-      }
-    });
+      });
   });
 
   router.delete(baseUri + '/:id', async (ctx, next) => {
-    await Recipe.findByIdAndRemove(ctx.params.id).exec(function (err, recipe) {
+    await Recipe.findOneAndRemove({ _id: ctx.params.id, uploader: ctx.state.user._id }).exec(function (err, recipe) {
       if (err) {
         ctx.onerror(err);
       }
-      else {
+      else if (recipe != null) {
         ctx.body = recipe;
         ctx.status = 200;
       }

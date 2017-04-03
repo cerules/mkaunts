@@ -20,7 +20,7 @@ export function intializePassport(app) {
             else {
                 return done(null, false);
             }
-        }).exec();
+        });
     }
 ));
     app.use(passport.initialize());
