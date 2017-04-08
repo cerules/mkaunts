@@ -80,6 +80,14 @@ This is a map between normalized package names and their paths. <br>
 
 When installing a package on the client be sure to add it to the build/bundles.js file if you intend on bundling.
 
+## Tests
+
+We [Mocha](https://mochajs.org/) as a test framework, [Chai](http://chaijs.com/) as an assertion library, [Sinon](http://sinonjs.org/) as a stubbing/mocking library, and [Karma](http://karma-runner.github.io/1.0/index.html) as a client side test runner.
+
+**mocha** will start the Node tests.
+
+**karma start** will start the Aurelia tests.
+
 ## Type Defintion Files
 Type definition files allow us to define type information for Javascript code.
 

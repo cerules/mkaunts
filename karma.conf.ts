@@ -39,12 +39,12 @@ module.exports = function (config) {
         ],
         exclude: [],
         preprocessors: {},
-        reporters: ['progress'],
+         reporters: ['spec'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['Chrome'],
-        singleRun: false
+        singleRun: true
     });
 };
