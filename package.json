@@ -6,6 +6,7 @@
   "author": "cerules",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^3.4.35",
     "@types/config": "0.0.32",
     "@types/jsonwebtoken": "^7.2.0",
     "@types/koa": "^2.0.38",
@@ -15,20 +16,32 @@
     "@types/koa-passport": "^2.0.4",
     "@types/koa-router": "^7.0.21",
     "@types/koa-static": "^2.0.22",
+    "@types/mocha": "^2.2.40",
     "@types/mongoose": "^4.7.8",
     "@types/passport-jwt": "^2.0.19",
+    "@types/sinon": "^2.1.2",
     "aurelia-bundler": "^0.5.0",
     "aurelia-tools": "^1.0.0",
+    "chai": "^3.5.0",
     "del": "^2.2.2",
+    "es6-module-loader": "^0.17.11",
     "gulp": "^3.9.1",
     "gulp-changed": "^1.3.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-typescript": "^3.1.6",
     "jspm": "^0.16.52",
+    "karma": "^1.6.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-sinon": "^1.0.5",
+    "karma-systemjs": "^0.16.0",
+    "mocha": "^3.2.0",
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
-    "systemjs": "^0.20.5",
+    "sinon": "^2.1.0",
+    "systemjs": "^0.19.47",
     "typescript": "^2.2.1",
     "typings": "^2.1.0",
     "vinyl-paths": "^2.1.0"
@@ -58,11 +71,7 @@
       "jquery": "npm:jquery@^2.2.4",
       "text": "github:systemjs/plugin-text@^0.0.8"
     },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
-    }
+    "devDependencies": {}
   },
   "dependencies": {
     "config": "^1.25.1",

@@ -14,6 +14,7 @@
   "include": [
     "typings/index.d.ts",
     "src/**/*.ts",
+    "tests/**/*.ts",
     "./custom_typings/**/*.d.ts",
     "./app/public/jspm_packages/**/*.d.ts"
   ]
