@@ -14,7 +14,7 @@ module.exports = function (config) {
                     'es6-module-loader': 'node_modules/es6-module-loader/dist/es6-module-loader.js'
                 },
                 packages: {
-                    'tests': {
+                    'test': {
                         defaultExtension: 'ts'
                     },
                     'src': {
@@ -34,8 +34,8 @@ module.exports = function (config) {
             ]
         },
         files: [
-            'tests/unit/aurelia/setup.ts',
-            'tests/unit/aurelia/*.ts'
+            'test/unit/aurelia/setup.ts',
+            'test/unit/aurelia/*.ts'
         ],
         exclude: [],
         preprocessors: {},
