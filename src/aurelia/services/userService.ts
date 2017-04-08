@@ -13,16 +13,16 @@ export class UserService {
 
     login(email, password) {
         return this.dataService.login(email, password)
-            .then(() => this.whoami());
+            .then(() => this.whoAmI());
     }
 
     register(email, password) {
         return this.dataService.register(email, password)
-            .then(() => this.whoami());
+            .then(() => this.whoAmI());
     }
 
-    whoami() {
-        return this.dataService.whoami()
+    whoAmI() {
+        return this.dataService.whoAmI()
             .then(user => {
                 console.log(user);
                 this.user = user;

@@ -45,7 +45,7 @@ export class DataService {
             .catch(error => this.handleRequestError(error));
     }
 
-    whoami(): Promise<IUser> {
+    whoAmI(): Promise<IUser> {
         return this.getRequest('api/user/whoami');
     }
 

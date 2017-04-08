@@ -15,15 +15,15 @@ Make sure to update the Mongo connection string in config/default.json
 
 Run the following commands from the command line
 
-4. npm install gulp -g
-5. npm install jspm -g
+4. **npm install gulp -g**
+5. **npm install jspm -g**
 
 ### Install Packages
 Ensure you are in mkaunts/ i.e. the folder with the package.json
 
-6. npm install
-7. jspm install
-8. typings install
+6. **npm install**
+7. **jspm install**
+8. **typings install**
 
 ## Building
 We use [gulp](http://gulpjs.com/) as a taskrunner to handle building the app. <br>
@@ -84,9 +84,13 @@ When installing a package on the client be sure to add it to the build/bundles.j
 
 We [Mocha](https://mochajs.org/) as a test framework, [Chai](http://chaijs.com/) as an assertion library, [Sinon](http://sinonjs.org/) as a stubbing/mocking library, and [Karma](http://karma-runner.github.io/1.0/index.html) as a client side test runner.
 
-**mocha** will start the Node tests.
+    mocha
 
-**karma start** will start the Aurelia tests.
+will start the Node tests.
+
+    karma start
+
+will start the Aurelia tests.
 
 ## Type Defintion Files
 Type definition files allow us to define type information for Javascript code.
