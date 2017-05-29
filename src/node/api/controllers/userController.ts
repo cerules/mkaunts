@@ -32,7 +32,7 @@ export function userController(router: Router, baseUri: string) {
           ctx.status = 200;
         }
         else {
-          ctx.onerror(null);
+          ctx.onerror(new Error("login failed"));
         }
       }
     });

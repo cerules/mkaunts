@@ -2,14 +2,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "sourceMap": true,
-    "experimentalDecorators": true,
+    "target": "es5",
+    "module": "umd",
     "declaration": false,
     "noImplicitAny": false,
     "removeComments": true,
     "emitDecoratorMetadata": true,
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["es2015", "dom"]
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "lib": ["es2015", "dom"],
+    "strict": true
   },
   "include": [
     "typings/index.d.ts",

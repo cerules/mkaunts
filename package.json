@@ -44,7 +44,7 @@
     "sinon": "^2.1.0",
     "systemjs": "^0.19.47",
     "ts-node": "^3.0.2",
-    "typescript": "^2.2.1",
+    "typescript": "^2.3.3",
     "typings": "^2.1.0",
     "vinyl-paths": "^2.1.0"
   },

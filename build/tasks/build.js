@@ -4,6 +4,7 @@ var changed = require('gulp-changed');
 var sourcemaps = require('gulp-sourcemaps');
 var paths_client = require('../paths_client');
 var paths_server = require('../paths_server');
+var paths_shared = require('../paths_shared');
 var typescript = require('gulp-typescript');
 var htmlmin = require('gulp-htmlmin');
 
@@ -12,8 +13,10 @@ var typescriptCompiler_client = typescriptCompiler_client || null;
 var typescriptCompiler_server = typescriptCompiler_server || null;
 gulp.task('build-system', function() {
   if(!typescriptCompiler_client) {
-    typescriptCompiler_client = typescript.createProject('tsconfig_client.json', {
-      "typescript": require('typescript')
+    typescriptCompiler_client = typescript.createProject('tsconfig.json', {
+      "typescript": require('typescript'),
+      "rootDir": paths_shared.rootDir,
+      "outDir": paths_client.output
     });
   }
 
@@ -54,8 +57,11 @@ gulp.task('build-client', function(callback) {
 
 gulp.task('build-server', function() {
   if(!typescriptCompiler_server) {
-    typescriptCompiler_server = typescript.createProject('tsconfig_server.json', {
-      "typescript": require('typescript')
+    typescriptCompiler_server = typescript.createProject('tsconfig.json', {
+      "typescript": require('typescript'),
+      "rootDir": paths_shared.rootDir,
+      "outDir": paths_server.outDir,
+      "target": "es6"
     });
   }
 
