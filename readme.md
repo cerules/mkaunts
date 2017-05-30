@@ -88,6 +88,8 @@ We [Mocha](https://mochajs.org/) as a test framework, [Chai](http://chaijs.com/)
 
 will start the Node tests.
 
+__note: using Typescript version greater than 2.2 will break karma unit tests. Hoping to find the solution to this soon.__ 
+
     karma start
 
 will start the Aurelia tests.

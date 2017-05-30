@@ -1,6 +1,5 @@
 import { UserService } from './../../../src/aurelia/services/userService';
 
-
 describe("UserService", () => {
     const assert = chai.assert;
 
