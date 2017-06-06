@@ -17,13 +17,14 @@ Run the following commands from the command line
 
 4. **npm install gulp -g**
 5. **npm install jspm -g**
+6. **npm install typings -g**
 
 ### Install Packages
 Ensure you are in mkaunts/ i.e. the folder with the package.json
 
-6. **npm install**
-7. **jspm install**
-8. **typings install**
+7. **npm install**
+8. **jspm install**
+9. **typings install**
 
 ## Building
 We use [gulp](http://gulpjs.com/) as a taskrunner to handle building the app. <br>
