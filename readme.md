@@ -5,6 +5,8 @@ This is a template for creating a [Node](https://nodejs.org/en/) https applicati
 ## Prerequisites
 
 1. [Install Node](https://nodejs.org)
+
+__Requires at least node version 7__
 2. [Download Mongo](https://www.mongodb.com/download-center?jmp=nav#community)
 3. [Install Mongo](https://docs.mongodb.com/manual/administration/install-community/)
 
