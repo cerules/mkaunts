@@ -48,7 +48,7 @@ userSchema.methods.generateJWT = function () {
     let today = new Date(), exp = new Date(today);
     exp.setDate(exp.getDate() + 1);
 
-    return jwt.sign({
+    return jwt.sign(<any>{
         _id: this._id,
         sub: this.email,
         exp: exp.getTime() / 1000 // exp is in milliseconds and we want seconds
