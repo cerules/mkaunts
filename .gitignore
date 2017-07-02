@@ -1,7 +1,6 @@
 node_modules/
 typings/
 app/public/dist/
-app/public/src/
 app/public/jspm_packages/
 app/node/
 export/
