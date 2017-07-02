@@ -9,10 +9,10 @@ import * as mongoose from 'mongoose';
 import * as api from './api/router';
 
 //set mongoose/mongo driver promise libraries to native promises
-// (<any>mongoose).Promise = global.Promise;
-// mongoose.connect(<string>config.get('MongoConnectionString'), {
-//     promiseLibrary: global.Promise
-// });
+(<any>mongoose).Promise = global.Promise;
+mongoose.connect(<string>config.get('MongoConnectionString'), {
+    promiseLibrary: global.Promise
+});
 
 const app = new koa();
 
